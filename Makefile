@@ -19,6 +19,8 @@ PANDOC_PARAMS=\
 		--resource-path=./chapters/ \
 		--to=beamer
 
+PHP_FILES=$(wildcard examples/**/*.php examples/*.php)
+
 MMD_FILES=$(wildcard media/*.mmd)
 MMD_PDF_FILES=$(foreach wrd,$(MMD_FILES),$(wrd).pdf)
 
@@ -51,13 +53,13 @@ media/%.svg.pdf: media/%.svg
 	inkscape --export-area-drawing --export-filename="$@" "$^"
 media/%.eps.pdf: media/%.eps
 	epstopdf "$^" "$@"
-$(PRESENTATION): $(TEMPLATE) $(THEME) $(MMD_PDF_FILES) $(TEX_PDF_FILES) $(SVG_PDF_FILES) $(EPS_PDF_FILES) $(CHAPTERS)
+$(PRESENTATION): $(TEMPLATE) $(THEME) $(MMD_PDF_FILES) $(TEX_PDF_FILES) $(SVG_PDF_FILES) $(EPS_PDF_FILES) $(PHP_FILES) $(CHAPTERS)
 	$(PANDOC) \
 		$(PANDOC_PARAMS) \
 		--output=$(PRESENTATION) \
 		--to=beamer \
 		$(CHAPTERS)
-$(HANDOUT): $(PRESENTATION) $(TEMPLATE) $(THEME) $(MMD_PDF_FILES) $(TEX_PDF_FILES) $(SVG_PDF_FILES) $(EPS_PDF_FILES) $(CHAPTERS)
+$(HANDOUT): $(PRESENTATION) $(TEMPLATE) $(THEME) $(MMD_PDF_FILES) $(TEX_PDF_FILES) $(SVG_PDF_FILES) $(EPS_PDF_FILES) $(PHP_FILES) $(CHAPTERS)
 	$(PANDOC) \
 		$(PANDOC_PARAMS) \
 		--output=$(HANDOUT) \
