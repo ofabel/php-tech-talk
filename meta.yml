@@ -32,5 +32,17 @@ header-includes:
   - \setbeamercolor{description item}{fg=black}
   - \setbeamersize{description width=0.25\textwidth}
   - \setbeamerfont{description item}{series=\bfseries}
-  - \setbeamertemplate{footline}{\makebox[0.4\textwidth]{}\makebox[0.2\textwidth][c]{\normalsize{\insertpagenumber}}\makebox[0.4\textwidth][r]{\includegraphics[height=0.6cm]{./media/logo.eps.pdf}\hspace{3pt}}\vspace{3pt}}
+  - |
+    \setbeamertemplate{footline}{%
+      \makebox[0.4\textwidth]{}
+      \makebox[0.2\textwidth][c]{%
+        \raisebox{3pt}{%
+          \normalsize{\insertpagenumber}
+        }
+      }
+      \makebox[0.4\textwidth][r]{%
+        \includegraphics[height=0.6cm]{./media/logo.eps.pdf}\hspace{3pt}
+      }
+      \vspace{3pt}
+    }
 
