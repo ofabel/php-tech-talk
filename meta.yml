@@ -36,7 +36,7 @@ header-includes:
     \setbeamertemplate{footline}{%
       \makebox[0.4\textwidth]{}
       \makebox[0.2\textwidth][c]{%
-        \raisebox{3pt}{%
+        \raisebox{5pt}{%
           \normalsize{\insertpagenumber}
         }
       }

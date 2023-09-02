@@ -1,14 +1,14 @@
 <!-- @formatter:off --><?php
-abstract class Animal
-{
-    public function doEat(): void { echo 'eating ...'; }
+namespace foo\bar;
+
+class FooBar {
+    private readonly string $bar;
+
+    public function __construct(
+        string $bar
+    ) {
+        $this->bar = $bar;
+    }
+
+    public function __destruct() {}
 }
-
-abstract class Bird extends Animal
-{
-    public function doFly(): void { echo 'flying ...'; }
-}
-
-class Eagle extends Bird { }
-
-class Kiwi extends Bird { }

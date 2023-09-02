@@ -1,6 +1,14 @@
-<?php
-$someEagle = new Eagle();
-$someKiwi = new Kiwi();
+<!-- @formatter:off --><?php
+abstract class Animal
+{
+    public function doEat(): void { echo 'eating ...'; }
+}
 
-$someEagle->doEat();
-$someEagle->doFly();
+abstract class Bird extends Animal
+{
+    public function doFly(): void { echo 'flying ...'; }
+}
+
+class Eagle extends Bird { }
+
+class Kiwi extends Bird { }
