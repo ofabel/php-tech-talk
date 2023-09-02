@@ -39,4 +39,3 @@ Influenced
 ## A Brief History
 
 ![](../media/timeline.mmd.pdf)
-

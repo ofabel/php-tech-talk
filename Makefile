@@ -5,6 +5,7 @@ PANDOC=pandoc
 MMDC=mmdc
 INKSCAPE=inkscape
 TEMPLATE=./temp/template.tex
+THEME=./temp/code.theme
 
 PANDOC_PARAMS=\
 		--embed-resources \
@@ -12,6 +13,7 @@ PANDOC_PARAMS=\
 		--template=$(TEMPLATE) \
 		--metadata-file=./meta.yml \
 		--slide-level=3 \
+		--highlight-style=./temp/code.theme \
 		--defaults=./defaults.yml \
 		--filter=pandoc-include \
 		--resource-path=./chapters/ \
@@ -49,13 +51,13 @@ media/%.svg.pdf: media/%.svg
 	inkscape --export-area-drawing --export-filename="$@" "$^"
 media/%.eps.pdf: media/%.eps
 	epstopdf "$^" "$@"
-$(PRESENTATION): $(TEMPLATE) $(MMD_PDF_FILES) $(TEX_PDF_FILES) $(SVG_PDF_FILES) $(EPS_PDF_FILES) $(CHAPTERS)
+$(PRESENTATION): $(TEMPLATE) $(THEME) $(MMD_PDF_FILES) $(TEX_PDF_FILES) $(SVG_PDF_FILES) $(EPS_PDF_FILES) $(CHAPTERS)
 	$(PANDOC) \
 		$(PANDOC_PARAMS) \
 		--output=$(PRESENTATION) \
 		--to=beamer \
 		$(CHAPTERS)
-$(HANDOUT): $(PRESENTATION) $(TEMPLATE) $(MMD_PDF_FILES) $(TEX_PDF_FILES) $(SVG_PDF_FILES) $(EPS_PDF_FILES) $(CHAPTERS)
+$(HANDOUT): $(PRESENTATION) $(TEMPLATE) $(THEME) $(MMD_PDF_FILES) $(TEX_PDF_FILES) $(SVG_PDF_FILES) $(EPS_PDF_FILES) $(CHAPTERS)
 	$(PANDOC) \
 		$(PANDOC_PARAMS) \
 		--output=$(HANDOUT) \
@@ -65,6 +67,8 @@ $(HANDOUT): $(PRESENTATION) $(TEMPLATE) $(MMD_PDF_FILES) $(TEX_PDF_FILES) $(SVG_
 .PHONY: init
 init:
 	mkdir -p $(TEMP)
+$(THEME): $(INCLUDES) $(CONFIGS)
+	$(PANDOC) --print-highlight-style haddock | jq '.["text-styles"].Other["text-color"] = null' > $(THEME)
 $(TEMPLATE): $(INCLUDES) $(CONFIGS)
 	$(PANDOC) --print-default-template=beamer | cat ./includes/template.tex - > $(TEMPLATE)
 .PHONY: clean
