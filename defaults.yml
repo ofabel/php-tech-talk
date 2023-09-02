@@ -1,0 +1,6 @@
+table-of-contents: true
+toc: true
+toc-depth: 1
+number-sections: true
+include-before-body:
+  - includes/title.tex

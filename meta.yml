@@ -1,0 +1,41 @@
+title: false
+subtitle: Make PHP great again
+author:
+  - Oliver Fabel
+institute:
+  - FHNW
+date: 01.11.2023
+theme: default
+innertheme: circles
+outertheme: default
+colortheme: wolverine
+fonttheme: professionalfonts
+section-titles: false
+block-headings: true
+toc-title: Table of Contents
+colorlinks: true
+linkcolor: black
+urlcolor: blue
+aspectratio: 169
+titlegraphic: ./media/logo.eps.pdf
+lang: en
+version: 1.0.0
+themeoptions: [ ]
+header-includes:
+  - \title{PHP}
+  - \usepackage{transparent}
+  - \setbeamercolor{item projected}{bg=yellow!85!orange,fg=black}
+  - \setbeamercolor{subitem projected}{bg=yellow!85!orange,fg=black}
+  - \setbeamercolor{subsubitem projected}{bg=yellow!85!orange,fg=black}
+  - \setbeamercolor{itemize item}{fg=yellow!85!orange}
+  - \setbeamercolor{itemize subitem}{fg=yellow!85!orange}
+  - \setbeamercolor{itemize subsubitem}{fg=yellow!85!orange}
+  - \setbeamercolor{description item}{fg=black}
+  - \setbeamersize{description width=0.25\textwidth}
+  - \setbeamerfont{description item}{series=\bfseries}
+  - \setbeamertemplate{footline}{\makebox[0.4\textwidth]{}\makebox[0.2\textwidth][c]{\normalsize{\insertpagenumber}}\makebox[0.4\textwidth][r]{\includegraphics[height=0.6cm]{./media/logo.eps.pdf}\hspace{3pt}}\vspace{3pt}}
+  - \usepackage{listings}
+  - \lstset{fancyvrb=true, columns=fullflexible, breaklines=false, showspaces=false, keepspaces=true, showstringspaces=false, literate={\ \ \ \ }{{\copyablespaceTwo\copyablespaceTwo}}4}
+  - \usepackage[space=true]{accsupp}
+  - \newcommand{\copyablespaceTwo}{\BeginAccSupp{method=hex, unicode, ActualText=00200020}\texttransparent{0}{\textvisiblespace\textvisiblespace}\EndAccSupp{}}
+
