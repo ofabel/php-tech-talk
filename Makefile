@@ -1,3 +1,5 @@
+# requires https://pypi.org/project/pandoc-include/
+
 PDFLATEX=pdflatex
 PANDOC=pandoc
 MMDC=mmdc
@@ -11,6 +13,7 @@ PANDOC_PARAMS=\
 		--metadata-file=./meta.yml \
 		--slide-level=3 \
 		--defaults=./defaults.yml \
+		--filter=pandoc-include \
 		--resource-path=./chapters/ \
 		--to=beamer
 

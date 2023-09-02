@@ -40,6 +40,3 @@ Influenced
 
 ![](../media/timeline.mmd.pdf)
 
-```php
-asdf
-```
