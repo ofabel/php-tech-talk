@@ -8,11 +8,11 @@ let limit = Math.pow(n, 0.5);
 
 while (i < SIZE)
 {
-    var isPrime = true;
+    let isPrime = true;
 
     for (j = 1; isPrime && primes[j] < limit && j < i; j++)
     {
-        if (n % primes[j] == 0)
+        if (n % primes[j] === 0)
         {
             isPrime = false;
         }

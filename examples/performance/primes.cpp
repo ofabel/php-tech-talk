@@ -1,7 +1,7 @@
 #include <iostream>
 #include <math.h>
 
-// g++ primes.cpp -o primes++
+// g++ primes.cpp -o primes++ -Ofast
 
 using namespace std;
 

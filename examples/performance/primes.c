@@ -2,7 +2,7 @@
 #include <math.h>
 #include <stdbool.h>
 
-// gcc primes.c -lm -o primes
+// gcc primes.c -lm -o primes -Ofast
 
 #define SIZE 1000000
 
@@ -32,7 +32,7 @@ int main()
             known[i] = n;
             i++;
 
-            printf("%d", n);
+            printf("%d\n", n);
         }
 
         n += 2;
