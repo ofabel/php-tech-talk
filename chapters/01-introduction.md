@@ -36,6 +36,14 @@ Influenced
 
 :   Hack, JSP, ASP, React JS
 
+Packetmanager
+
+:   Composer
+
+Extensions
+
+:   `.php`, `.phar`
+
 ## A Brief History
 
 ![](../media/timeline.mmd.pdf)

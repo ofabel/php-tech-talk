@@ -12,7 +12,6 @@ PANDOC_PARAMS=\
 		--standalone \
 		--template=$(TEMPLATE) \
 		--metadata-file=./meta.yml \
-		--slide-level=3 \
 		--highlight-style=./temp/code.theme \
 		--defaults=./defaults.yml \
 		--filter=pandoc-include \

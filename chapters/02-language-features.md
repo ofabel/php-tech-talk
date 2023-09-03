@@ -48,10 +48,10 @@
 
 ### Magic Methods {.allowframebreaks}
 
-Methods starting with `__` are reserved. The following methods are considered magical.\vspace{1ex}
+Methods starting with `__` are reserved. The following methods are considered magical.\vspace{2ex}
 
-:::::::::::::: {.columns .onlytextwidth }
-::: {.column width="50%" }
+:::::::::::::: {.columns .onlytextwidth}
+::: {.column width="50%"}
 
 Frequently used and reasonable:
 
@@ -62,6 +62,7 @@ Frequently used and reasonable:
 * `__wakeup()`
 * `__serialize()`
 * `__unserialize()`
+* `__invoke()`
 * `__toString()`
 * `__set_state()`
 * `__debugInfo()`
@@ -77,7 +78,6 @@ Rarely used and questionable:
 * `__unset()`
 * `__call()`
 * `__callStatic()`
-* `__invoke()`
 
 :::
 ::::::::::::::
@@ -85,5 +85,28 @@ Rarely used and questionable:
 \framebreak
 
 ```php
-!include`startLine=2` ./examples/logger-proxy.php
+!include`startLine=2` ./examples/magic-methods/logger-proxy.php
 ```
+
+\framebreak
+
+:::::::::::::: {.columns}
+::: {.column width="60%"}
+
+\scriptsize
+
+```php
+!include`startLine=2` ./examples/magic-methods/invoke.php
+```
+
+:::
+::: {.column width="40%"}
+
+\scriptsize
+
+```php
+!include`startLine=2` ./examples/magic-methods/invoke-usage.php
+```
+
+:::
+::::::::::::::
