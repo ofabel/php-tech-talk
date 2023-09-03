@@ -1,11 +1,12 @@
 <?php
+$values = [
+    'one' => 1,
+    'two' => 2,
+    'three' => 3
+];
 
-$low = [1, 2, 3];
-$high = [4, 5, 6];
+$values[] = 4;
+$values['five'] = 5;
 
-$all = [...$low, ...$high];
-
-$all[] = 7;
-$all[] = 8;
-
-echo $all[0];
+echo $values[0]; // 4
+echo $values['one']; // 1
