@@ -9,4 +9,3 @@ echo implode(', ', $evens); // 8, 64
 
 $sum = array_reduce($cubes, fn(?int $s, int $x) => ($s ?? 0) + $x);
 echo $sum; // 225
-
