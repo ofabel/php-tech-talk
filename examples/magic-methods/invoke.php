@@ -1,5 +1,4 @@
-<?php
-
+<!-- @formatter:off --><?php
 class Sort
 {
     private string $key;

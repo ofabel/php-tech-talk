@@ -15,6 +15,26 @@
 
 \framebreak
 
+:::::::::::::: {.columns}
+::: {.column width="29.333%"}
+
 ```php
-!include`startLine=2` ./examples/operators.php
+!include`startLine=2` ./examples/operators/trueish-falseish.php
 ```
+
+:::
+::: {.column width="42.333%"}
+
+```php
+!include`startLine=2` ./examples/operators/equality.php
+```
+
+:::
+::: {.column width="28.333%"}
+
+```php
+!include`startLine=2` ./examples/operators/coalescing.php
+```
+
+:::
+::::::::::::::
