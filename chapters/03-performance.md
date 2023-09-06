@@ -32,6 +32,22 @@
 
 ![](../media/objects.gpl.svg.pdf)
 
+## Fibonacci
+
+### Benchmark Code
+
+\scriptsize
+
+```php
+!include`startLine=2` ./examples/performance/fibonacci/fibonacci.php
+```
+
+### Results
+
+\centering
+
+![](../media/fibonacci.gpl.svg.pdf)
+
 ## Primes
 
 ### Benchmark Code

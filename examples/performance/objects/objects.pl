@@ -1,5 +1,3 @@
-use strict;
-
 package Box;
 sub Box_data
 {
