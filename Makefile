@@ -12,7 +12,6 @@ PANDOC_PARAMS=\
 		--standalone \
 		--template=$(TEMPLATE) \
 		--metadata-file=./meta.yml \
-		--highlight-style=./temp/code.theme \
 		--defaults=./defaults.yml \
 		--filter=pandoc-include \
 		--resource-path=./chapters/ \
