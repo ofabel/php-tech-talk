@@ -1,15 +1,49 @@
 # Performance
 
-## Benchmark Code
+## Array
+
+### Benchmark Code
 
 \scriptsize
 
 ```php
-!include`startLine=2` ./examples/performance/primes.php
+!include`startLine=2` ./examples/performance/array/array.php
 ```
 
-## Results
+### Results
 
 \centering
 
-![](../media/performance.mmd.pdf)
+![](../media/array.gpl.svg.pdf)
+
+## Objects
+
+### Benchmark Code
+
+\scriptsize
+
+```php
+!include`startLine=2` ./examples/performance/objects/objects.php
+```
+
+### Results
+
+\centering
+
+![](../media/objects.gpl.svg.pdf)
+
+## Primes
+
+### Benchmark Code
+
+\scriptsize
+
+```php
+!include`startLine=2` ./examples/performance/primes/primes.php
+```
+
+### Results
+
+\centering
+
+![](../media/primes.gpl.svg.pdf)

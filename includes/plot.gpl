@@ -1,0 +1,16 @@
+set ydata time
+
+set format y "%M:%S"
+set timefmt "%H:%M:%S"
+
+set size ratio 0.5
+set boxwidth 0.75
+set style fill solid
+set border 0
+set grid
+set tics scale 0
+set key off
+
+set terminal svg size 800,400
+
+plot '-' using 1:3:xtic(2) with boxes fillstyle solid 1.0 fillcolor "grey"

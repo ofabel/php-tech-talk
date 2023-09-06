@@ -25,6 +25,9 @@ MMD_PDF_FILES=$(foreach wrd,$(MMD_FILES),$(wrd).pdf)
 TEX_FILES=$(wildcard media/*.tex)
 TEX_PDF_FILES=$(foreach wrd,$(TEX_FILES),$(wrd).pdf)
 
+GPL_FILES=$(wildcard media/*.gpl)
+GPL_SVG_PDF_FILES=$(foreach wrd,$(GPL_FILES),$(wrd).svg.pdf)
+
 SVG_FILES=$(wildcard media/*.svg)
 SVG_PDF_FILES=$(foreach wrd,$(SVG_FILES),$(wrd).pdf)
 
@@ -47,17 +50,21 @@ media/%.tex.pdf: media/%.tex
 	$(PDFLATEX) -interaction=nonstopmode -output-directory=$(TEMP) $(TEMP)/temp.tex
 	mv $(TEMP)/temp.pdf "$@"
 	rm -f $(TEMP)/temp.*
+media/%.gpl.svg.pdf: media/%.gpl
+	cat includes/plot.gpl "$^" | gnuplot > "$^.svg"
+	inkscape --export-area-drawing --export-filename="$@" "$^.svg"
+	rm "$^.svg"
 media/%.svg.pdf: media/%.svg
 	inkscape --export-area-drawing --export-filename="$@" "$^"
 media/%.eps.pdf: media/%.eps
 	epstopdf "$^" "$@"
-$(PRESENTATION): $(TEMPLATE) $(THEME) $(MMD_PDF_FILES) $(TEX_PDF_FILES) $(SVG_PDF_FILES) $(EPS_PDF_FILES) $(PHP_FILES) $(CHAPTERS)
+$(PRESENTATION): $(TEMPLATE) $(THEME) $(MMD_PDF_FILES) $(TEX_PDF_FILES) $(GPL_SVG_PDF_FILES) $(SVG_PDF_FILES) $(EPS_PDF_FILES) $(PHP_FILES) $(CHAPTERS)
 	$(PANDOC) \
 		$(PANDOC_PARAMS) \
 		--output=$(PRESENTATION) \
 		--to=beamer \
 		$(CHAPTERS)
-$(HANDOUT): $(PRESENTATION) $(TEMPLATE) $(THEME) $(MMD_PDF_FILES) $(TEX_PDF_FILES) $(SVG_PDF_FILES) $(EPS_PDF_FILES) $(PHP_FILES) $(CHAPTERS)
+$(HANDOUT): $(PRESENTATION) $(TEMPLATE) $(THEME) $(MMD_PDF_FILES) $(TEX_PDF_FILES) $(GPL_SVG_PDF_FILES)$ (SVG_PDF_FILES) $(EPS_PDF_FILES) $(PHP_FILES) $(CHAPTERS)
 	$(PANDOC) \
 		$(PANDOC_PARAMS) \
 		--output=$(HANDOUT) \

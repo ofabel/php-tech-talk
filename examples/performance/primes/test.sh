@@ -9,4 +9,11 @@
 /usr/bin/time --format='Perl\t%E' perl ./primes.pl > /dev/null
 /usr/bin/time --format='PHP\t%E' php -d opcache.enable_cli=1 ./primes.php > /dev/null
 /usr/bin/time --format='Python\t%E' python ./primes.py > /dev/null
+
+echo 'pypy3.9-7.3.10'>.python-version
+
+/usr/bin/time --format='PyPy\t%E' pypy ./primes.py > /dev/null
+
+rm .python-version
+
 /usr/bin/time --format='Ruby\t%E' ruby ./primes.rb > /dev/null
