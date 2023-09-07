@@ -1,7 +1,9 @@
-<!-- @formatter:off --><?php // php -d opcache.enable_cli=1 ./primes.php
+<?php // php -d opcache.enable_cli=1 ./primes.php
 define('SIZE', 1_000_000);
 
-$known = [2, 3]; $n = 5; $i = 2; $j = 1; $limit = pow($n, 0.5);
+$known = [2, 3];
+[$n, $i, $j] = [5, 2, 1];
+$limit = pow($n, 0.5);
 
 while ($i < SIZE) {
     $isPrime = true;
@@ -13,10 +15,12 @@ while ($i < SIZE) {
     }
 
     if ($isPrime) {
-        $known[$i] = $n; $i++;
+        $known[$i] = $n;
+        $i++;
 
         echo($n . PHP_EOL);
     }
 
-    $n += 2; $limit = pow($n, 0.5);
+    $n += 2;
+    $limit = pow($n, 0.5);
 }

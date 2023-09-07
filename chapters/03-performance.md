@@ -1,58 +1,52 @@
 # Performance
 
-## Array
-
-### Benchmark Code
+## Array {.allowframebreaks}
 
 ```php
 !include`startLine=2` ./examples/performance/array/array.php
 ```
 
-### Results
+\framebreak
 
 \centering
 
 ![](../media/array.gpl.svg.pdf)
 
-## Objects
+## Objects {.allowframebreaks}
 
-### Benchmark Code
+\scriptsize
 
 ```php
 !include`startLine=2` ./examples/performance/objects/objects.php
 ```
 
-### Results
+\framebreak
 
 \centering
 
 ![](../media/objects.gpl.svg.pdf)
 
-## Fibonacci
-
-### Benchmark Code
+## Fibonacci {.allowframebreaks}
 
 ```php
 !include`startLine=2` ./examples/performance/fibonacci/fibonacci.php
 ```
 
-### Results
+\framebreak
 
 \centering
 
 ![](../media/fibonacci.gpl.svg.pdf)
 
-## Primes
+## Primes {.allowframebreaks}
 
-### Benchmark Code
-
-\scriptsize
+\tiny
 
 ```php
 !include`startLine=2` ./examples/performance/primes/primes.php
 ```
 
-### Results
+\framebreak
 
 \centering
 
