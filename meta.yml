@@ -32,6 +32,28 @@ header-includes:
   - \setbeamercolor{description item}{fg=black}
   - \setbeamersize{description width=0.25\textwidth}
   - \setbeamerfont{description item}{series=\bfseries}
+  - \usepackage{etoolbox}
+  - \usepackage{xpatch}
+  - \makeatletter
+  - |
+    \patchcmd\beamer@@tmpl@frametitle{\insertframetitle}{%
+      \ifdefempty{\insertsection}{%
+        \insertframetitle
+      }{%
+        \insertsection:~\insertframetitle 
+      }
+    }{}{}
+  - \makeatother
+  - |
+    \AtBeginSection[]{
+      \begin{frame}[plain,c]
+        \vskip0pt plus 1filll
+        \begin{beamercolorbox}[sep=10pt,center]{title}
+          \usebeamerfont{title}\insertsectionhead\par%
+        \end{beamercolorbox}
+        \vskip0pt plus 1filll
+      \end{frame}
+    }
   - |
     \setbeamertemplate{footline}{%
       \makebox[0.4\textwidth]{}

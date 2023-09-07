@@ -4,8 +4,6 @@
 
 ### Benchmark Code
 
-\scriptsize
-
 ```php
 !include`startLine=2` ./examples/performance/array/array.php
 ```
@@ -20,8 +18,6 @@
 
 ### Benchmark Code
 
-\scriptsize
-
 ```php
 !include`startLine=2` ./examples/performance/objects/objects.php
 ```
@@ -35,8 +31,6 @@
 ## Fibonacci
 
 ### Benchmark Code
-
-\scriptsize
 
 ```php
 !include`startLine=2` ./examples/performance/fibonacci/fibonacci.php
