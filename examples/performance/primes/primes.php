@@ -1,5 +1,5 @@
 <?php // php -d opcache.enable_cli=1 ./primes.php
-define('SIZE', 1_000_000);
+const SIZE = 1_000_000;
 
 $known = [2, 3];
 [$n, $i, $j] = [5, 2, 1];
