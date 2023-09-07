@@ -34,24 +34,31 @@ header-includes:
   - \setbeamerfont{description item}{series=\bfseries}
   - \usepackage{etoolbox}
   - \usepackage{xpatch}
+  - \addtobeamertemplate{frametitle}{\NoHyper}{\endNoHyper}
   - \makeatletter
   - |
     \patchcmd\beamer@@tmpl@frametitle{\insertframetitle}{%
       \ifdefempty{\insertsection}{%
         \insertframetitle
       }{%
-        \insertsection:~\insertframetitle 
+        \ifdefempty{\insertsubsubsection}{%
+          \insertsection:~\insertframetitle
+        }{%
+          \insertsection:~\insertsubsection~--~\insertframetitle
+        }
       }
     }{}{}
   - \makeatother
   - |
     \AtBeginSection[]{
       \begin{frame}[plain,c]
+        \NoHyper
         \vskip0pt plus 1filll
         \begin{beamercolorbox}[sep=10pt,center]{title}
           \usebeamerfont{title}\insertsectionhead\par%
         \end{beamercolorbox}
         \vskip0pt plus 1filll
+        \endNoHyper
       \end{frame}
     }
   - |

@@ -1,18 +1,22 @@
 # Performance
 
-## Array {.allowframebreaks}
+## Array
+
+### Code
 
 ```php
 !include`startLine=2` ./examples/performance/array/array.php
 ```
 
-\framebreak
+### Results
 
 \centering
 
 ![](../media/array.gpl.svg.pdf)
 
-## Objects {.allowframebreaks}
+## Objects
+
+### Code
 
 \scriptsize
 
@@ -20,25 +24,29 @@
 !include`startLine=2` ./examples/performance/objects/objects.php
 ```
 
-\framebreak
+### Results
 
 \centering
 
 ![](../media/objects.gpl.svg.pdf)
 
-## Fibonacci {.allowframebreaks}
+## Fibonacci
+
+### Code
 
 ```php
 !include`startLine=2` ./examples/performance/fibonacci/fibonacci.php
 ```
 
-\framebreak
+### Results
 
 \centering
 
 ![](../media/fibonacci.gpl.svg.pdf)
 
-## Primes {.allowframebreaks}
+## Primes
+
+### Code
 
 \tiny
 
@@ -46,7 +54,7 @@
 !include`startLine=2` ./examples/performance/primes/primes.php
 ```
 
-\framebreak
+### Results
 
 \centering
 
