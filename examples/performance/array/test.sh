@@ -6,7 +6,7 @@
 /usr/bin/time --format='Java\t%E' java Array.java > /dev/null
 /usr/bin/time --format='Node\t%E' node ./array.js > /dev/null
 /usr/bin/time --format='Perl\t%E' perl ./array.pl > /dev/null
-/usr/bin/time --format='PHP\t%E' php -d opcache.enable_cli=1 ./array.php > /dev/null
+/usr/bin/time --format='PHP\t%E' php -d opcache.enable_cli=1 -d opcache.jit_buffer_size=32M ./array.php > /dev/null
 /usr/bin/time --format='Python\t%E' python ./array.py > /dev/null
 
 echo 'pypy3.9-7.3.10'>.python-version

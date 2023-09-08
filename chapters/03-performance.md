@@ -12,6 +12,12 @@
 
 \centering
 
+![](../media/array-history.gpl.svg.pdf)
+
+### Comparison
+
+\centering
+
 ![](../media/array.gpl.svg.pdf)
 
 ## Objects
@@ -25,6 +31,12 @@
 ```
 
 ### Results
+
+\centering
+
+![](../media/objects-history.gpl.svg.pdf)
+
+### Comparison
 
 \centering
 
@@ -42,6 +54,12 @@
 
 \centering
 
+![](../media/fibonacci-history.gpl.svg.pdf)
+
+### Comparison
+
+\centering
+
 ![](../media/fibonacci.gpl.svg.pdf)
 
 ## Primes
@@ -55,6 +73,12 @@
 ```
 
 ### Results
+
+\centering
+
+![](../media/primes-history.gpl.svg.pdf)
+
+### Comparison
 
 \centering
 

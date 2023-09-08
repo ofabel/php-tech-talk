@@ -1,11 +1,9 @@
 <?php // php -d opcache.enable_cli=1 ./primes.php
-const SIZE = 1_000_000;
-
-$known = [2, 3];
-[$n, $i, $j] = [5, 2, 1];
+$known = array(2, 3);
+list($n, $i, $j) = array(5, 2, 1);
 $limit = pow($n, 0.5);
 
-while ($i < SIZE) {
+while ($i < 1000000) {
     $isPrime = true;
 
     for ($j = 1; $isPrime && $known[$j] < $limit && $j < $i; $j++) {
