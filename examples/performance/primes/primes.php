@@ -1,4 +1,4 @@
-<?php // php -d opcache.enable_cli=1 ./primes.php
+<?php // php -d opcache.enable_cli=1 -d opcache.jit_buffer_size=32M ./primes.php
 $known = array(2, 3);
 list($n, $i, $j) = array(5, 2, 1);
 $limit = pow($n, 0.5);
