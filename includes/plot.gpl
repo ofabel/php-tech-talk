@@ -10,6 +10,7 @@ set border 0
 set grid
 set tics scale 0
 set key off
+set yrange ["00:00:00.000":*]
 
 set terminal svg size 800,400
 

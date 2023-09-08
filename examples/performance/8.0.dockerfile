@@ -1,3 +1,3 @@
-FROM php:5.6-cli
+FROM php:8.0-cli
 
 RUN docker-php-ext-install opcache

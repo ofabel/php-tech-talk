@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
-docker build -t php-5.6:latest -f ./5.6.dockerfile .
-docker build -t php-7.4:latest -f ./7.4.dockerfile .
-docker build -t php-8.2:latest -f ./8.2.dockerfile .
+versions=('5.3' '5.4' '5.5' '5.6' '7.0' '7.1' '7.2' '7.3' '7.4' '8.0' '8.1' '8.2')
+
+for version in "${versions[@]}"; do
+  docker build -t "php-${version}:latest" -f "./${version}.dockerfile" .
+done
