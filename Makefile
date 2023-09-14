@@ -51,7 +51,7 @@ media/%.tex.pdf: media/%.tex
 	mv $(TEMP)/temp.pdf "$@"
 	rm -f $(TEMP)/temp.*
 media/%.gpl.svg.pdf: media/%.gpl
-	cat includes/plot.gpl "$^" | gnuplot > "$^.svg"
+	gnuplot "$^" > "$^.svg"
 	inkscape --export-area-drawing --export-filename="$@" "$^.svg"
 	rm "$^.svg"
 media/%.svg.pdf: media/%.svg
