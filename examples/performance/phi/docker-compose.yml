@@ -1,0 +1,67 @@
+services:
+  php-5.6-opcache-on:
+    build:
+      dockerfile: 'Dockerfile'
+      args:
+        VERSION: '5.6'
+        OPCACHE: '1'
+        JIT: '1'
+    volumes:
+      - '.:/var/www/html'
+    ports:
+      - '8061:80'
+  php-5.6-opcache-off:
+    build:
+      dockerfile: 'Dockerfile'
+      args:
+        VERSION: '5.6'
+        OPCACHE: '0'
+        JIT: '0'
+    volumes:
+      - '.:/var/www/html'
+    ports:
+      - '8060:80'
+  php-7.4-opcache-on:
+    build:
+      dockerfile: 'Dockerfile'
+      args:
+        VERSION: '7.4'
+        OPCACHE: '1'
+        JIT: '1'
+    volumes:
+      - '.:/var/www/html'
+    ports:
+      - '8071:80'
+  php-7.4-opcache-off:
+    build:
+      dockerfile: 'Dockerfile'
+      args:
+        VERSION: '7.4'
+        OPCACHE: '0'
+        JIT: '0'
+    volumes:
+      - '.:/var/www/html'
+    ports:
+      - '8070:80'
+  php-8.2-opcache-on:
+    build:
+      dockerfile: 'Dockerfile'
+      args:
+        VERSION: '8.2'
+        OPCACHE: '1'
+        JIT: '1'
+    volumes:
+      - '.:/var/www/html'
+    ports:
+      - '8081:80'
+  php-8.2-opcache-off:
+    build:
+      dockerfile: 'Dockerfile'
+      args:
+        VERSION: '8.2'
+        OPCACHE: '0'
+        JIT: '0'
+    volumes:
+      - '.:/var/www/html'
+    ports:
+      - '8080:80'
