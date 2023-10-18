@@ -8,14 +8,14 @@ TEMPLATE=./temp/template.tex
 THEME=./temp/code.theme
 
 PANDOC_PARAMS=\
-		--embed-resources \
-		--standalone \
-		--template=$(TEMPLATE) \
-		--metadata-file=./meta.yml \
-		--defaults=./defaults.yml \
-		--filter=pandoc-include \
-		--resource-path=./chapters/ \
-		--to=beamer
+	--embed-resources \
+	--standalone \
+	--template=$(TEMPLATE) \
+	--metadata-file=./meta.yml \
+	--defaults=./defaults.yml \
+	--filter=pandoc-include \
+	--resource-path=./chapters/ \
+	--to=beamer
 
 PHP_FILES=$(wildcard examples/**/*.php examples/*.php)
 
@@ -64,7 +64,7 @@ $(PRESENTATION): $(TEMPLATE) $(THEME) $(MMD_PDF_FILES) $(TEX_PDF_FILES) $(GPL_SV
 		--output=$(PRESENTATION) \
 		--to=beamer \
 		$(CHAPTERS)
-$(HANDOUT): $(PRESENTATION) $(TEMPLATE) $(THEME) $(MMD_PDF_FILES) $(TEX_PDF_FILES) $(GPL_SVG_PDF_FILES)$ (SVG_PDF_FILES) $(EPS_PDF_FILES) $(PHP_FILES) $(CHAPTERS)
+$(HANDOUT): $(PRESENTATION) $(TEMPLATE) $(THEME) $(MMD_PDF_FILES) $(TEX_PDF_FILES) $(GPL_SVG_PDF_FILES) $(SVG_PDF_FILES) $(EPS_PDF_FILES) $(PHP_FILES) $(CHAPTERS)
 	$(PANDOC) \
 		$(PANDOC_PARAMS) \
 		--output=$(HANDOUT) \

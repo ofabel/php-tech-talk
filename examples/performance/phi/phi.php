@@ -1,5 +1,5 @@
 <?php
-$primes = include_once 'primes.php';
+$primes = include_once 'primes.php'; // contains the first 1'000'004 prime numbers (up to 15'476'729)
 
 $temp = $number = isset($_GET['number']) ? $_GET['number'] : 1;
 $factors = [];

@@ -36,7 +36,7 @@ Influenced
 
 :   Hack, JSP, ASP, React JS
 
-Packetmanager
+Package Manager
 
 :   Composer
 

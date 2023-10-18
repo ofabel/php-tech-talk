@@ -22,7 +22,7 @@ Frequently used and reasonable:
 :::
 ::: {.column width="50%"}
 
-Rarely used and questionable:
+Rarely used and questionable (under normal circumstances):
 
 * `__get()`
 * `__set()`

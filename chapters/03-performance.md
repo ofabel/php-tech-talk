@@ -83,3 +83,19 @@
 \centering
 
 ![](../media/primes.gpl.svg.pdf)
+
+## Phi
+
+### Code
+
+\scriptsize
+
+```php
+!include`startLine=2` ./examples/performance/phi/phi.php
+```
+
+### Results
+
+\centering
+
+![](../media/phi.gpl.svg.pdf)

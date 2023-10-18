@@ -6,3 +6,4 @@ number-sections: true
 include-before-body:
   - includes/title.tex
 highlight-style: ./temp/code.theme
+pdf-engine: xelatex

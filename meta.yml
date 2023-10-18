@@ -18,6 +18,7 @@ linkcolor: black
 urlcolor: blue
 aspectratio: 169
 titlegraphic: ./media/logo.eps.pdf
+monofont: Noto Mono
 lang: en
 version: 1.0.0
 themeoptions: [ ]
