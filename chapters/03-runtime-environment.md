@@ -17,8 +17,6 @@
 
 ## Hosting a PHP Application
 
-Several options available:
-
 1. Apache with `mod_php`: The most simple solution.
     * Limited to one user, group and thread.
     * Limited to Apache web server.
@@ -33,3 +31,11 @@ Several options available:
     * One user and group per CGI process.
     * Suitable, if you need to intercept between web server and script execution.
     * Setup might be challenging.
+
+## Options to Tweak Performance
+
+* Increase `memory_limit` (default is `128M`)
+* Enable byte code cache `opcache.enable` (available since version 5.5)
+* Increase byte code cache `opcache.memory_consumption`
+* Enable JIT compiler `opcache.jit` (since version 8.0)
+* Disable debugger (it's mandatory to unload the module entirely)
