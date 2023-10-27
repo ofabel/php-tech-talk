@@ -1,5 +1,5 @@
 title: false
-subtitle: Make PHP great again?
+subtitle: What the Hack?!
 author:
   - Oliver Fabel
 institute:
@@ -23,7 +23,7 @@ lang: en
 version: 1.0.0
 themeoptions: [ ]
 header-includes:
-  - \title{PHP}
+  - \title{PHP?}
   - \setbeamercolor{item projected}{bg=yellow!85!orange,fg=black}
   - \setbeamercolor{subitem projected}{bg=yellow!85!orange,fg=black}
   - \setbeamercolor{subsubitem projected}{bg=yellow!85!orange,fg=black}
