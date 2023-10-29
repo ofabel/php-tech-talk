@@ -1,17 +1,24 @@
 # Runtime Environment
 
+## How PHP is executed
+
+* Scripts are executed in "one-shot".
+* **Memory is volatile per HTTP request.**
+* Various options available to make computed values durable:
+    * `$_SESSION` variable - HTTP user session support.
+    * APCu - an in-memory key-value store.
+    * Various modules for third party solutions, e.g. Memcached.
+
 ## Running PHP is Easy
 
-1. On the local computer, using the PHP interpreter:
+1. On the local computer in the terminal:\newline
+   `php script.php`
 
-   ```shell
-   php script.php
-   ```
-2. On a web server, using the LAMP\footnotemark[1] stack:
+2. On the local computer using the builtin development web server:\newline
+   `php -S 127.0.0.1:8080 -t . router.php`
 
-   ```plain
-   GET /script.php
-   ```
+3. On a web server, using the LAMP\footnotemark[1] stack:\newline
+   `GET /script.php`
 
 \footnotetext[1]{\textbf{L}inux \textbf{A}pache \textbf{M}ySQL \textbf{P}HP}
 
@@ -32,10 +39,19 @@
     * Suitable, if you need to intercept between web server and script execution.
     * Setup might be challenging.
 
-## Options to Tweak Performance
+## Options to Tweak PHP
 
-* Increase `memory_limit` (default is `128M`)
+Runtime environment and behaviour:
+
+* Adjust `memory_limit` (default is `128M`)
+* Adjust `max_execution_time` (default is `30` seconds)
+* Adjust `display_errors` (default is `On`)
+
+Performance recommendations:
+
+* Increase `realpath_cache_size` (default is `4M`)
 * Enable byte code cache `opcache.enable` (available since version 5.5)
 * Increase byte code cache `opcache.memory_consumption`
 * Enable JIT compiler `opcache.jit` (since version 8.0)
+* Disable assertions `zend.assertions` (default is `On`)
 * Disable debugger (it's mandatory to unload the module entirely)
