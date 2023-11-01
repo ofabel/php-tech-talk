@@ -3,7 +3,7 @@ $known = array(2, 3);
 list($n, $i, $j) = array(5, 2, 1);
 $limit = pow($n, 0.5);
 
-while ($i < 1000000) {
+while ($i < 1000000) { // 1_000_000
     $isPrime = true;
 
     for ($j = 1; $isPrime && $known[$j] < $limit && $j < $i; $j++) {
