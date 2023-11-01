@@ -1,6 +1,6 @@
 ## Functions {.allowframebreaks}
 
-* Functions are introduced with the keyword `function`.
+* Functions are introduced with the keyword `function`{.php}.
 * Functions have to be defined before they are referenced.
 * Overloading is not supported, functions cannot be redefined.
 * Pass and return scalar values by reference is possible.
